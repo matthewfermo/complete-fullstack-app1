@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>To-Do List - Profile</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header text-center">
+      <h1>Your To-Do List</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+    <div class="row">
+      <!-- LOCAL INFORMATION -->
+      <!-- <div class="col-sm-6">
+        <div class="well">
+          <h3><span class="fa fa-user"></span> Local</h3>
+          <% if (user.local.email) { %>
+            <p>
+              <strong>id</strong>: <%= user._id %><br>
+                <strong>email</strong>: <%= user.local.email %><br>
+                  <strong>password</strong>: <%= user.local.password %>
+            </p>
+            <a href="/unlink/local" class="btn btn-default">Unlink</a>
+            <% } else { %>
+              <a href="/connect/local" class="btn btn-default">Connect Local</a>
+              <% } %>
+        </div> -->
+    </div>
+    <div class="col-sm-6">
+      <h3>To-Do:</h3>
+      <ul class="messages">
+        <% for(var i=0; i<messages.length; i++) {%>
+          <li class="message">
+            <span>
+              <%= messages[i].task %>
+            </span>
+            <input type="text" class="hide" value="<%= messages[i].msg %>" placeholder="task">
+            <span class="hide"><i data-id="<%= messages[i]._id %>" class="fas fa-save" aria-hidden="true"></i></span>
+            <span><i data-id="<%= messages[i]._id %>" class="fa fa-pencil" aria-hidden="true"></i></span>
+            <span><i data-id="<%= messages[i]._id %>" class="fa fa-trash" aria-hidden="true"></i></span>
+          </li>
+          <% } %>
+      </ul>
+      <h2>Add a task</h2>
+      <% if (user.local.email) { %>
+        <form action="/messages" method="POST">
+          <input type="text" placeholder="Task" name="task">
+          <button type="submit">Add Task</button>
+        </form>
+    </div>
+    <% } %>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
