@@ -1,12 +1,26 @@
-# complete-fullstack-app1
+# To Do List App
 
-# Book Rating Application
+## Description
 
-## Introduction
-Welcome to the Book Rating Application, a full-stack solution for book enthusiasts to rate and discover books. Engage with a community of readers, rate your favorite books, and explore titles recommended by others.
+Full-stack web application that allows users to sign in and create a private list of tasks they wish to accomplish/keep track of.
 
 ## Features
-- **Book Entry**: Add books to the application database with titles and author names.
-- **Rating System**: Express your opinion by liking or disliking books.
-- **Dynamic Sorting**: Browse books sorted by popularity, based on the community’s likes and dislikes.
-- **User-Friendly Interface**: A clean and intuitive interface for an enjoyable user experience.
+
+- User authentication and authorization
+- Private lists
+- Responsive design
+- Edit and delete entries on list
+
+## Technologies Used
+
+- HTML
+- JavaScript
+- CSS
+- EJS Templating
+- Node.js
+- MongoDB
+
+## Installation
+
+1. run `node server.js`
+2. Navigate to `localhost:4040` in your browser
