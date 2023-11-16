@@ -23,4 +23,4 @@ Full-stack web application that allows users to sign in and create a private lis
 ## Installation
 
 1. run `node server.js`
-2. Navigate to `localhost:4040` in your browser
+2. Navigate to `localhost:8080` in your browser
